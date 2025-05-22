@@ -1,12 +1,15 @@
 
-import BarberHome from "../components/BarberHome";
+// Nova Home: Sidebar à esquerda, conteúdo à direita via Outlet
+import { Outlet } from "react-router-dom";
+import BarberSidebar from "@/components/sidebar/BarberSidebar";
 
 export default function Index() {
   return (
-    <div className="bg-gray-100 min-h-screen flex items-center justify-center">
-      <div className="flex flex-col w-full max-w-md min-h-screen bg-gray-100">
-        <BarberHome />
-      </div>
+    <div className="min-h-screen w-full flex bg-gray-100">
+      <BarberSidebar />
+      <main className="flex-1 flex flex-col items-center justify-center p-6">
+        <Outlet />
+      </main>
     </div>
   );
 }

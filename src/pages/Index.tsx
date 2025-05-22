@@ -1,14 +1,12 @@
-// Update this page (the content is just a fallback if you fail to update the page)
 
-const Index = () => {
+import BarberHome from "../components/BarberHome";
+
+export default function Index() {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-gray-600">Start building your amazing project here!</p>
+    <div className="bg-gray-100 min-h-screen flex items-center justify-center">
+      <div className="flex flex-col w-full max-w-md min-h-screen bg-gray-100">
+        <BarberHome />
       </div>
     </div>
   );
-};
-
-export default Index;
+}
